@@ -1,0 +1,532 @@
+---
+title: "4442_Project - Wine Dataset"
+subtitle: "Multinomial Regression to Predict Grape Variety"
+author: "Grayson Gunderson and Thomas Beadle"
+date: "2024-03-13"
+output:
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(readr)
+library(tidyverse)
+library(nnet) # contains multinom() function
+library(ggplot2)
+library(jmv)
+library(dplyr)
+library(car)
+library(lmtest)
+library(MASS)
+```
+
+
+## The 3 types of Logistic Regression: When to use Multinomial Logistic Regression 
+
+Multinomial Logistic Regression is useful when an outcome variable has more than two categories with no inherent ranking and we want to model the probability of each outcome. Binomial Logistic Regression can be used to predict a categorical outcome with only two possibilities. Ordinal Logistic Regression is preferred when the outcome variable has more than 2 categorical outcomes and is logically ordered. The nature of the outcome variable will determine which of the three logistic regression techniques would produce the best model for a given data set. Similar to Binary Logistic Regression, Multinomial Logistic Regression models the probabilities of the outcome categories. However, instead of modeling the probability of one category versus another, Multinomial Logistic Regression models the probability of each category relative to a reference category. 1 or more independent variables are used to predict the probability that an observation belongs to each category of the outcome variable. Generally, Multinomial Logistic Regression is used when categories of the dependent variable have no inherent ranking, such as color of a car, types of drinks, or in this case, wine cultivars (the type of grapes used to make the wine).
+
+Below are some prerequisites that must be met by the data in order to model its outcome using Multinomial Logistic Regression: 
+- The outcome must be categorical with more than two outcomes 
+- The Categorical outcomes must be nominal (not logically ordered) 
+- The data set used to create the model should contain observations that fall into each of the categorical outcomes 
+- The sample size should be large enough to reliably predict each of the unique outcome cases. As the number of categorical outcomes increases, the sample size required to build a robust model to predict each outcome also increases. 
+- Predictor variables should have at least 10-15 observations (more is better) in order for them to be considered as included predictors. 
+- Predictor variables should have a measurable impact on the outcome; if they are unrelated or share a weak relationship, we will not be able to reliably predict the outcome based on the values of the predictors. 
+
+It is also important that the number of categories and predictor variables are not too large. The number of fitted parameters in a Multinomial Logistic Regression model is given by the formula P(K-1), where P is the number of predictors and K is the number of categories, a high number of either one can lead to a prohibitively complex model. 
+
+
+
+## Dataset Information: 
+
+These data are the results of a chemical analysis of wines grown in the same region in Italy but derived from three different cultivars (grape types). The analysis measured the quantities of 13 constituents found in each of the three cultivars.
+
+The attributes are: </p>
+1) Alcohol </p>
+2) Malic acid </p>
+3) Ash </p>
+4) Alcalinity of ash </p> 
+5) Magnesium </p>
+6) Total phenols </p>
+7) Flavanoids </p>
+8) Nonflavanoid phenols </p>
+9) Proanthocyanins </p>
+10) Color intensity </p>
+11) Hue </p>
+12) OD280/OD315 of diluted wines </p>
+13) Proline </p>
+
+
+## Research Question: Can we predict the cultivar of wine (Class 1, 2, or 3) based on the values of chemical properties that were recorded in this data using Multinomial Logistic Regression? 
+
+Upload the wine data set to R.
+```{r}
+# Specify URL
+url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data"
+
+# Read the dataset into a data frame
+wine.data <- read_csv(url, col_names = FALSE, show_col_types = FALSE)
+
+# Add column Names
+colnames(wine.data) <- c("Class", "Alcohol", "MalicAcid", "Ash", "AlcalinityOfAsh", "Magnesium", "TotalPhenols", "Flavanoids", "NonflavanoidPhenols", "Proanthocyanins", "ColorIntensity", "Hue", "OD280/OD315", "Proline")
+
+```
+
+
+The response variable "Class" was loaded in as a numeric data type. In Multinomial Logistic Regression, the response variable is categorical, so we will change the "Class" variable from a numeric to a factor. Now we can check the structure of the Data and the Summary to ensure it was uploaded successfully.
+
+```{r}
+wine.data$Class <- as.factor(wine.data$Class)
+str(wine.data)
+
+```
+
+
+We should also check our data set for any missing values before proceeding.
+```{r}
+# search entire data set for any missing values
+missing_vals <- colSums(is.na(wine.data))
+
+# Display the results
+print(missing_vals)
+```
+We can see from the output that there is no missing data to be handled. 
+
+One of the column names in our data set has a format that could cause problems. Let's replace the "/" with "_" in the "OD280/OD315" column to prevent any interpretability issues that could arise later on.
+```{r}
+colnames(wine.data)[colnames(wine.data) == "OD280/OD315"] <- "OD280_OD315"
+```
+
+
+We can run the summary function to get an overview of our dataset in its current state. 
+```{r}
+summary(wine.data)
+```
+
+
+----------------------------------------------------------
+
+Let's review some important assumptions of Multinomial Logistic Regression:
+
+## Independence of Observations
+For this demo we will assume that our data is independent. The overview and description of the data set did not give us any reason to believe otherwise, but it is important to note that we are assuming our observations are independent, which is one of the requirements for using Multinomial Logistic Regression.
+
+## Randomness
+Based on the data set description, there is no reason to believe that the data was not randomly selected. For the purposes of this demo, we will assume that the data is randomly sampled.
+
+## Linearity
+To perform multinomial logistic regression, there must be a linear relationship between the log-odds of the outcome variable and the predictor variables.
+
+## No Multicollinearity: 
+Multicollinearity occurs when two or more independent variables are highly correlated with one another. This can cause issues in understanding which variables are responsible for the result of the dependent variable. 
+
+----------------------------------------------------------
+
+## Frequency of Categorical Outcomes
+
+It is also important to check the frequencies of occurrences for each outcome category in the data set. If one outcome occurs significantly more than the others (typically 4:1 or 5:1), the model may skew to predict an increased likelihood of the categorical outcome with the most observations. This is a quick check on the assumption of independence of irrelevant alternatives.
+
+```{r}
+# descriptive data
+descrpts <- descriptives(wine.data, freq = TRUE)
+
+descrpts$frequencies
+```
+
+Class 2 has the largest number of observations in our data set but not enough to require adjustment. Although the number of observations for each categorical outcome are not equal, the distribution of the dependent variable does not warrant concern. Since we don't have a lot of information regarding the three different wine grapes (represented by Class = 1, 2, or 3), we will choose the categorical outcome with the most observations (Class 2) as the reference category.
+
+```{r}
+wine.data$Class <- relevel(wine.data$Class, ref = "2")
+
+# Convert factor levels to valid variable names
+wine.data$Class <- as.factor(wine.data$Class)
+wine.data$Class <- make.names(as.character(wine.data$Class))
+
+# Set levels for the entire dataset
+wine.data$Class <- factor(wine.data$Class, levels = make.names(c("2", "1", "3")))
+
+```
+
+
+Before jumping straight to building our Multinomial Logistic Regression model, it is a good practice to separate the data into testing, validation, and training sets. This will enable us to train our model on one subset, and test the model's performance on a different subset that the model has not yet seen. This practice gives us a better understanding of our model's generalizability.
+
+In the below code we will randomly assign 60% of our observations to the training subset, 20% to the testing subset, and 20% to the validation subset.
+```{r}
+n <- nrow(wine.data)
+
+set.seed(12345)
+
+tvt <- sample(rep(0:2, c(round(n * 0.2), round(n * 0.2), n - 2 * round(n * 0.2))), n)
+
+dat.train <- wine.data[tvt == 2,]
+dat.valid <- wine.data[tvt == 1,]
+dat.test <- wine.data[tvt == 0,]
+
+# Check that the sum of the three sets is equal to the total number of rows in the data set
+print(n == nrow(dat.train) + nrow(dat.valid) + nrow(dat.test))
+
+
+```
+```{r}
+table(tvt)
+
+```
+
+To eliminate predictors, we will use stepwise selection. Stepwise selection uses both forward and backward movement to eliminate and add predictors until a final model is produced based upon a specified selection criterion. In this case we will be minimizing AIC. 
+```{r}
+# Fit multinomial logistic regression model
+model.multinom <- multinom(Class ~ ., data = dat.train)
+
+# Create a temporary file to capture output (setting trace = 0 did not suppress the output)
+sink("temp_output.txt")
+
+# Perform stepwise AIC
+model.stepwise <- stepAIC(model.multinom, direction = "both", trace.lev = 0)
+
+# Stop capturing output
+sink()
+
+# Display the summary
+summary(model.stepwise)
+
+
+```
+
+Stepwise selection produced a model with three predictors: Flavanoids, ColorIntensity, and Proline. The AIC for this model on the training data was 18.7379.
+
+----------------------------------------------------------
+
+## Interpreting Coefficients:
+
+Coefficients:
+   (Intercept)  Flavanoids ColorIntensity    Proline
+X1  -142.39944   0.5257433       14.30966  0.1094293
+X3   -34.49088 -25.1572390       19.52752 -0.0223283
+
+
+In multinomial logistic regression, one category is chosen as the reference category, and the coefficients for the other categories are expressed relative to this reference category. In our model, Class 2 was chosen as the reference category, therefore we will only see coefficient estimates for Classes 1 and 3.
+
+For each Class (X1, X3 = Class 1, Class 3), there are intercepts and coefficients for the predictor variables included in our model (Flavanoids, ColorIntensity, and Proline).
+
+The coefficient values correspond to the estimated effect that each predictor has on the log-odds of each observation belonging to the respective class, relative to the reference class.
+
+
+# For example, in X1 (Class 1):
+
+Keeping all other predictors constant, if the value of Flavanoids increases by 1 unit, the log-odds of the observation being categorized as X1 (Class 1) increases by 0.5257433 more than the log-odds of the observation being categorized as X2 (Class 2). To put it more generally, higher levels of Flavanoids result in a higher probability of classifying an observation as Class 1 compared to Class 2.
+
+The coefficient for ColorIntensity is 14.30966, indicating that as ColorIntensity increases by one unit, the log-odds of the observation being categorized as X1 (Class 1) increases by 14.30966 more than the log-odds of the observation being categorized as X2 (Class 2).
+
+The coefficient for Proline is 0.1094293, indicating that as Proline increases by one unit, the log-odds of the observation being categorized as X1 (Class 1) increases by 0.1094293 more than the log-odds of the observation being categorized as X2 (Class 2).
+
+
+# For X3 (Class 3):
+
+Keeping all other predictors constant, if the value of Flavanoids increases by 1 unit, the log-odds of the observation belonging to X3 (Class 3) decreases by 25.1572390 compared to the log-odds of the observation belonging to X2 (Class 2).
+
+If the value of ColorIntensity increases by 1 unit, the log-odds of the observation belonging to X3 (Class 3) increases by 19.52752 compared to the log-odds of the observation belonging to X2 (Class 2).
+
+If the value of Proline increases by 1 unit, the log-odds of the observation belonging to X3 (Class 3) decreases by 0.0223283 compared to the log-odds of the observation belonging to X2 (Class 2).
+
+
+----------------------------------------------------------
+
+## Predictor Significance
+
+Showing the p-values for each class and predictor in our model, we can confirm that each variable is significant:
+
+```{r}
+# Convert the model to tidy format
+tidy_model <- broom::tidy(model.stepwise)
+
+# Select specific columns using dplyr::select
+p_vals <- tidy_model %>%
+  dplyr::select(y.level, term, p.value)
+
+p_vals
+
+```
+
+The p-values above show the significance level of the effect of each predictor variable in differentiating each category (X1 and X3) from the reference category (X2). 
+
+Most of the p-values for the predictors in our model are below the statistical significance threshold of .05. The two exceptions are Flavanoids for X1 (~0.8085) and Proline for X3 (~.4644). These predictors are included in our model because the p-values for their counterparts are significant (Flavanoids for X3 = 1.333028e-40  and Proline for X1 4.702436e-181).
+
+The p-value of Flavanoids for X1 is above .05. This indicates that the level of Flavanoids does not have a significant impact on predicting whether an observation belongs to Class 1 (X1) or Class 2 (reference category). The p-value of Proline for X3 is above .05. This indicates that the level of Proline does not have a significant impact on predicting whether an observation belongs to Class 3 (X3) or Class 2 (reference category). 
+
+
+
+## Graphs
+
+Now that we have checked and cleaned up the data, let's look at a few graphs of the data using different variables for x and y, coloring by class to see if it appears that class can be predicted by variables. 
+```{r}
+
+ggplot(data=wine.data,aes(x=Proline,y=ColorIntensity, color=Class))+geom_point()+
+  labs(
+    title = "Color Intensity vs. Proline",
+    x = "Proline",
+    y = "Color Intensity"
+  )
+
+ggplot(data=wine.data,aes(x=ColorIntensity ,y=Flavanoids, color=Class))+geom_point() +
+  labs(
+    title = "Flavanoids vs. Color Intensity",
+    x = "Color Intensity",
+    y = "Falvanoids"
+  )
+
+
+ggplot(data=wine.data,aes(x=Proline,y=Flavanoids, color=Class))+ geom_point() +
+  labs(
+    title = "Flavanoids vs. Proline",
+    x = "Proline",
+    y = "Falvanoids"
+  )
+
+
+
+```
+
+As displayed in the graphs above, it appears that the class of wine does have separation when plotting the chosen predictor variables from our model. This likely indicates that our multinomial logistic regression model is better at predicting the class of wine than the intercept only model; we will test this directly later on. 
+
+
+----------------------------------------------------------
+
+## Checking our Model for Multicollinearity
+
+Before we continue on to predictions, let's use the model we just created to verify that there is no significant multicollinearity in our chosen model:
+
+Variance Inflation Factors (VIFs) can be used to determine the level of multicollinearity that exists between predictors in a regression model. Larger VIFs indicate higher levels of multicollinearity. Generally, VIFs below 5 are acceptable values for the predictors in a multinomial logistic regression. 
+
+The vif() function in R can't handle multinomial logistic regression models, however we can input our model as a multiple linear Regression strictly for the purposes of checking for multicollinearity with the vif() function.
+
+```{r}
+# Convert class variable from a factor to a numeric to test for the VIF values
+dat.train.vif <- dat.train
+dat.train.vif$Class <- as.numeric(dat.train.vif$Class)
+
+# Use same predictors and data as in model.stepwise
+model.vif <- lm(Class ~ Flavanoids + ColorIntensity + Proline, data = dat.train.vif)
+
+# Calculate VIF values for predictors
+vif_values <- vif(model.vif)
+
+# Display VIF values
+print(vif_values)
+
+```
+
+The VIFs for each of the predictors in our model are close to 1, indicating that there is no strong evidence of multicollinearity. 
+
+
+----------------------------------------------------------
+## Predictions
+
+Now that we have produced our model, we can use it to make predictions on the validation data (which the model has not yet seen) and assess its performance.
+
+The function below computes a confusion matrix for a given model and data set:
+```{r}
+calc_confusions <- function(model, data) {
+  
+  # Make class predictions
+  pred.class <- predict(model, newdata = data)
+  
+    # Convert factor levels
+  levels(pred.class) <- c("Class 2", "Class 1", "Class 3")
+  levels(data$Class) <- c("Class 2", "Class 1", "Class 3")
+  
+  # Calculate accuracy
+  ConfuseMatrix <- table(Actual = data$Class, Predicted = pred.class)
+  
+  return(ConfuseMatrix)
+}
+
+
+```
+
+```{r}
+confusion.valid <- calc_confusions(model.stepwise, dat.valid)
+confusion.valid
+```
+
+
+# Interpreting a 3 x 3 confusion matrix:
+
+A 3 x 3 confusion matrix can be used when the outcome variable has 3 classes as opposed to 2. It extends the concepts of True Positives, True Negatives, False Negatives, and False Positives to 3 classes.
+
+The main diagonal represents correct classifications. The counts that are not on the main diagonal represent incorrect classifications. For the validation data, our model made 35 out of 36 correct classifications. There was 1 incorrect classification that is shown in the first row of the second column, indicating there was 1 instance in which the model incorrectly classified a Class 2 observation as a Class 1 observation.
+
+The Actual distribution of our 36 observations in dat.valid are as follows:
+Class 2: 13
+Class 1: 11
+Class 3: 12 
+
+The Predicted distribution of our 36 observations in dat.valid are as follows:
+Class 2: 12
+Class 1: 12
+Class 3: 12 
+
+
+# Accuracy 
+Now we can compute the overall accuracy, as well as the accuracy for each class using the confusion matrix that we produced. Accuracy can be easily computed from the 3x3 confusion matrix.
+
+Accuracy: The proportion of correctly predicted instances divided by the total instances. 
+```{r}
+# Overall Accuracy
+accuracy.valid <- sum(diag(confusion.valid))/sum(confusion.valid)
+
+# Class 2
+accuracy.valid.class2 <- confusion.valid[1, 1] / sum(confusion.valid[1, ])
+
+# Class 1
+accuracy.valid.class1 <- confusion.valid[2, 2] / sum(confusion.valid[2, ])
+
+# Class 3
+accuracy.valid.class3 <- confusion.valid[3, 3] / sum(confusion.valid[3, ])
+
+# Print or use the accuracy values as needed
+cat("Overall Accuracy:", accuracy.valid, "\n\n")
+cat("Accuracy for Class 2:", accuracy.valid.class2, "\n")
+cat("Accuracy for Class 1:", accuracy.valid.class1, "\n")
+cat("Accuracy for Class 3:", accuracy.valid.class3, "\n")
+
+#compare accuracy of test to frequencies in data. For a good model, we want the accuracy to be above the percent of occurrences in each class:
+descrpts$frequencies
+```
+For the Validation Data the overall accuracy was 97.22%.
+
+
+
+
+Now we can repeat this process on the testing data for additional metrics that relate to our model's performance.
+```{r}
+confusion.test <- calc_confusions(model.stepwise, dat.test)
+confusion.test
+
+# Overall Accuracy
+accuracy.test <- sum(diag(confusion.test))/sum(confusion.test)
+
+# Class 2
+accuracy.test.class2 <- confusion.test[1, 1] / sum(confusion.test[1, ])
+
+# Class 1
+accuracy.test.class1 <- confusion.test[2, 2] / sum(confusion.test[2, ])
+
+# Class 3
+accuracy.test.class3 <- confusion.test[3, 3] / sum(confusion.test[3, ])
+
+# Print or use the accuracy values as needed
+cat("\nOverall Accuracy:", accuracy.test, "\n\n")
+cat("Accuracy for Class 2:", accuracy.test.class2, "\n")
+cat("Accuracy for Class 1:", accuracy.test.class1, "\n")
+cat("Accuracy for Class 3:", accuracy.test.class3, "\n")
+
+#compare accuracy of test to frequencies in data. For a good model, we want the accuracy to be above the percent of occurences in each class:
+descrpts$frequencies
+```
+The Actual distribution of our 36 observations in dat.test are as follows:
+Class 2: 15
+Class 1: 14
+Class 3: 7 
+
+The Predicted distribution of our 36 observations in dat.test are as follows:
+Class 2: 13
+Class 1: 14
+Class 3: 9
+
+The Model performed less well on the testing data. It correctly classified 32 out of 36 observations with an overall accuracy of 88.89%.
+
+The lowest accuracy score by Class was 80%, for Class 2. It appears our model's weakest attribute is its tendency to classify a Class 2 observation as a Class 1 or Class 3 observation. However, 80% is still well above the 39.88% of Class 2 occurrences in our data so it appears to be a good fit.
+
+
+
+## Misclassification Error
+
+We can take 1 - accuracy to compute misclassification rate for the validation and test data.
+
+```{r}
+missClass.valid <- 1 - accuracy.valid
+
+missClass.test <- 1 - accuracy.test
+
+# Print or use the misclassification values as needed
+cat("\nMisclassification rate for validation data::", missClass.valid, "\n\n")
+cat("\nMisclassification rate for test data::", missClass.test, "\n\n")
+
+```
+
+----------------------------------------------------------
+
+# Likelihood Ratio Test
+
+As a final test, we can conduct a likelihood ratio test that compares the performance of our selected multinomial logistic regression model to the null model (the intercept-only model). This is a common test that is used to determine if a multinomial logistic regression model is necessary for predicting a categorical outcome. 
+
+```{r}
+# Fit the null model (intercept only)
+null_model <- multinom(Class ~ 1, data = dat.train)
+
+# Perform likelihood ratio test
+lr_test <- lrtest(null_model, model.stepwise)
+
+# Display the results
+print(lr_test)
+
+```
+The results of the likelihood ratio test show that our multinomial logistic regression model is significantly better at classifying the response variable than the null model (the intercept-only model). 
+
+With p < .05, we reject the null hypothesis that the more complex model (our multinomial logistic regression model) is not a significantly better fit than the null model. We conclude that our final model is a good fit and does not contain unnecessary predictors.
+
+Final Model: Class ~ Flavanoids + ColorIntensity + Proline
+
+----------------------------------------------------------
+
+## Conclusion
+
+Using Stepwise selection to minimize AIC, 10 predictors were eliminated from our model. The predictors that we found to be the most significant for predicting the Class of Wine were Flavanoids, ColorIntensity, and Proline.
+
+On the validation data, our model correctly classified 35 out of 36 observations (97.22% accuracy). On the testing data, our model correctly classified 32 out of 36 observations (88.89% accuracy). If we aggregate the results of our testing, our model correctly classified 67 out of 72 observations for an aggregate accuracy of 93.06%. 
+
+In general, our model's weakest attribute was its ability to correctly classify Class 2 observations. Out of 5 total misclassifications, 4 were Class 2 observations that were erroneously classified as Class 1 or Class 3 observations.
+
+The results of the likelihood ratio test showed that our model was a much better fit at predicting the categorical outcome than the null model.
+
+In summary, our multinomial logistic regression model was a fairly strong classifier for our data. We were able to correctly predict the cultivar of wine (grape type) based on the values of Flavanoids, ColorIntensity, and Proline for the overwhelming majority of our tested observations. 
+
+To revisit our research question: Can we predict the cultivar of wine (Class 1, 2, or 3) based on the values of chemical properties that were recorded in this data using Multinomial Logistic Regression? Yes - We were able to use Multinomial Logistic Regression to correctly predict the cultivar of wine with an aggregated accuracy of 93.06% using Flavanoids, ColorIntensity, and Proline as predictors. 
+
+
+----------------------------------------------------------
+
+## Outside References:
+Outside Reference 1:
+https://www.statstest.com/multinomial-logistic-regression/
+
+Outside Reference 2:
+https://www.kaggle.com/code/saurabhbagchi/multinomial-logistic-regression-for-beginners
+
+Outside Reference 3:
+https://statistics.laerd.com/spss-tutorials/multinomial-logistic-regression-using-spss-statistics.php
+
+Outside Reference 4:
+https://www.ibm.com/docs/en/spss-statistics/29.0.0?topic=regression-multinomial-logistic
+
+Outside Reference 5:
+https://www.mygreatlearning.com/blog/multinomial-logistic-regression/
+
+Outside Reference 6:
+https://stats.oarc.ucla.edu/r/dae/multinomial-logistic-regression/
+
+Outside Reference 7:
+https://online.stat.psu.edu/stat504/lesson/8
+
+Outside Reference 8 (R reference):
+https://bookdown.org/chua/ber642_advanced_regression/multinomial-logistic-regression.html
+https://bookdown.org/sarahwerth2024/CategoricalBook/multinomial-logit-regression-r.html
+
+Outside Reference 9 (R reference):
+https://rpubs.com/rslbliss/r_logistic_ws
+
+Outside Reference 10 (R reference):
+https://www.youtube.com/watch?v=c78eMWw43I0
+
