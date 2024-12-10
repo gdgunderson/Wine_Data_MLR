@@ -1,0 +1,1814 @@
+Start:  AIC=56
+Class ~ Alcohol + MalicAcid + Ash + AlcalinityOfAsh + Magnesium + 
+    TotalPhenols + Flavanoids + NonflavanoidPhenols + Proanthocyanins + 
+    ColorIntensity + Hue + OD280_OD315 + Proline
+
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 23.324672
+iter  20 value 0.922894
+iter  30 value 0.003553
+final  value 0.000002 
+converged
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 24.134697
+iter  20 value 1.247751
+iter  30 value 0.002980
+final  value 0.000013 
+converged
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 21.618860
+iter  20 value 3.243488
+iter  30 value 0.018331
+final  value 0.000073 
+converged
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 17.555050
+iter  20 value 1.363651
+iter  30 value 0.092086
+iter  40 value 0.003471
+iter  50 value 0.000230
+final  value 0.000004 
+converged
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 7.734053
+iter  20 value 0.861742
+iter  30 value 0.057254
+iter  40 value 0.013225
+final  value 0.000051 
+converged
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 21.504296
+iter  20 value 2.002096
+iter  30 value 0.005240
+final  value 0.000034 
+converged
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 23.002299
+iter  20 value 1.451206
+iter  30 value 0.002002
+final  value 0.000054 
+converged
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 21.411209
+iter  20 value 1.971841
+iter  30 value 0.005184
+final  value 0.000088 
+converged
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 21.864596
+iter  20 value 1.082806
+iter  30 value 0.002041
+final  value 0.000062 
+converged
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 28.989660
+iter  20 value 3.358494
+iter  30 value 0.008939
+final  value 0.000046 
+converged
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 21.525504
+iter  20 value 1.936165
+iter  30 value 0.005863
+final  value 0.000067 
+converged
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 22.327211
+iter  20 value 1.640132
+iter  30 value 0.002848
+final  value 0.000089 
+converged
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 19.832796
+iter  20 value 7.388891
+iter  30 value 0.632904
+iter  40 value 0.038963
+iter  50 value 0.005032
+final  value 0.000003 
+converged
+                      Df AIC
+- Alcohol              2  52
+- Proline              2  52
+- AlcalinityOfAsh      2  52
+- MalicAcid            2  52
+- TotalPhenols         2  52
+- ColorIntensity       2  52
+- Magnesium            2  52
+- Flavanoids           2  52
+- Proanthocyanins      2  52
+- Hue                  2  52
+- Ash                  2  52
+- NonflavanoidPhenols  2  52
+- OD280_OD315          2  52
+<none>                    56
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 23.324672
+iter  20 value 0.922894
+iter  30 value 0.003553
+final  value 0.000002 
+converged
+
+Step:  AIC=52
+Class ~ MalicAcid + Ash + AlcalinityOfAsh + Magnesium + TotalPhenols + 
+    Flavanoids + NonflavanoidPhenols + Proanthocyanins + ColorIntensity + 
+    Hue + OD280_OD315 + Proline
+
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 21.682997
+iter  20 value 0.401746
+iter  30 value 0.001588
+final  value 0.000004 
+converged
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 23.515157
+iter  20 value 2.894760
+iter  30 value 0.036932
+final  value 0.000000 
+converged
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 28.050674
+iter  20 value 2.461908
+iter  30 value 0.357238
+iter  40 value 0.134216
+iter  50 value 0.049187
+iter  60 value 0.028930
+iter  70 value 0.023852
+iter  80 value 0.020566
+iter  90 value 0.019112
+iter 100 value 0.010186
+final  value 0.010186 
+stopped after 100 iterations
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 10.665407
+iter  20 value 0.477229
+iter  30 value 0.058056
+iter  40 value 0.005661
+final  value 0.000009 
+converged
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 23.215364
+iter  20 value 0.956921
+iter  30 value 0.001277
+final  value 0.000083 
+converged
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 24.716905
+iter  20 value 0.472487
+iter  30 value 0.000616
+final  value 0.000071 
+converged
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 23.352730
+iter  20 value 1.020374
+iter  30 value 0.004592
+final  value 0.000002 
+converged
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 23.522664
+iter  20 value 1.233204
+iter  30 value 0.003691
+final  value 0.000019 
+converged
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 29.731932
+iter  20 value 0.511935
+iter  30 value 0.000911
+final  value 0.000024 
+converged
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 23.575607
+iter  20 value 1.317566
+iter  30 value 0.001535
+final  value 0.000053 
+converged
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 23.797908
+iter  20 value 0.937583
+iter  30 value 0.001358
+final  value 0.000092 
+converged
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 16.148742
+iter  20 value 7.461870
+iter  30 value 1.927255
+iter  40 value 0.125354
+iter  50 value 0.001422
+iter  60 value 0.000184
+iter  70 value 0.000166
+iter  80 value 0.000164
+final  value 0.000060 
+converged
+# weights:  45 (28 variable)
+initial  value 116.452903 
+iter  10 value 21.399909
+iter  20 value 1.848586
+iter  30 value 0.004400
+final  value 0.000075 
+converged
+                      Df   AIC
+- Ash                  2 48.00
+- NonflavanoidPhenols  2 48.00
+- MalicAcid            2 48.00
+- Magnesium            2 48.00
+- Proanthocyanins      2 48.00
+- ColorIntensity       2 48.00
+- Hue                  2 48.00
+- Proline              2 48.00
+- Flavanoids           2 48.00
+- TotalPhenols         2 48.00
+- OD280_OD315          2 48.00
+- AlcalinityOfAsh      2 48.02
+<none>                   52.00
++ Alcohol              2 56.00
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 23.515157
+iter  20 value 2.894760
+iter  30 value 0.036932
+final  value 0.000000 
+converged
+
+Step:  AIC=48
+Class ~ MalicAcid + AlcalinityOfAsh + Magnesium + TotalPhenols + 
+    Flavanoids + NonflavanoidPhenols + Proanthocyanins + ColorIntensity + 
+    Hue + OD280_OD315 + Proline
+
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 22.210129
+iter  20 value 3.228471
+iter  30 value 0.059877
+final  value 0.000052 
+converged
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 25.208598
+iter  20 value 2.446742
+iter  30 value 0.605307
+iter  40 value 0.286583
+iter  50 value 0.103712
+iter  60 value 0.080518
+iter  70 value 0.066607
+iter  80 value 0.059959
+iter  90 value 0.042277
+iter 100 value 0.038558
+final  value 0.038558 
+stopped after 100 iterations
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 11.841888
+iter  20 value 2.645622
+iter  30 value 0.050656
+iter  40 value 0.003965
+final  value 0.000000 
+converged
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 23.405640
+iter  20 value 3.063523
+iter  30 value 0.012953
+final  value 0.000045 
+converged
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 24.910556
+iter  20 value 2.172576
+iter  30 value 0.020048
+final  value 0.000039 
+converged
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 23.541187
+iter  20 value 2.933780
+iter  30 value 0.035454
+iter  40 value 0.000115
+iter  40 value 0.000058
+iter  40 value 0.000001
+final  value 0.000001 
+converged
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 23.717438
+iter  20 value 3.728544
+iter  30 value 0.043755
+final  value 0.000062 
+converged
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 30.038481
+iter  20 value 2.689668
+iter  30 value 0.018391
+final  value 0.000006 
+converged
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 23.762942
+iter  20 value 2.364972
+iter  30 value 0.031255
+final  value 0.000000 
+converged
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 23.985282
+iter  20 value 3.410788
+iter  30 value 0.010128
+final  value 0.000067 
+converged
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 18.629934
+iter  20 value 12.492832
+iter  30 value 10.802521
+iter  40 value 10.708249
+iter  50 value 10.689366
+iter  60 value 10.682326
+iter  70 value 10.677095
+iter  80 value 10.674186
+iter  90 value 10.673553
+final  value 10.673487 
+converged
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 21.618860
+iter  20 value 3.243488
+iter  30 value 0.018331
+final  value 0.000073 
+converged
+# weights:  42 (26 variable)
+initial  value 116.452903 
+iter  10 value 23.324672
+iter  20 value 0.922894
+iter  30 value 0.003553
+final  value 0.000002 
+converged
+                      Df    AIC
+- Magnesium            2 44.000
+- Hue                  2 44.000
+- NonflavanoidPhenols  2 44.000
+- ColorIntensity       2 44.000
+- Flavanoids           2 44.000
+- TotalPhenols         2 44.000
+- MalicAcid            2 44.000
+- Proanthocyanins      2 44.000
+- OD280_OD315          2 44.000
+- AlcalinityOfAsh      2 44.077
+<none>                   48.000
++ Ash                  2 52.000
++ Alcohol              2 52.000
+- Proline              2 65.347
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 11.841888
+iter  20 value 2.645622
+iter  30 value 0.050656
+iter  40 value 0.003965
+final  value 0.000000 
+converged
+
+Step:  AIC=44
+Class ~ MalicAcid + AlcalinityOfAsh + TotalPhenols + Flavanoids + 
+    NonflavanoidPhenols + Proanthocyanins + ColorIntensity + 
+    Hue + OD280_OD315 + Proline
+
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 13.119964
+iter  20 value 3.687759
+iter  30 value 0.572553
+iter  40 value 0.000495
+final  value 0.000067 
+converged
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 10.488325
+iter  20 value 2.426217
+iter  30 value 0.201473
+iter  40 value 0.030366
+iter  50 value 0.016708
+iter  60 value 0.010900
+iter  70 value 0.008747
+iter  80 value 0.007498
+iter  90 value 0.006842
+iter 100 value 0.006404
+final  value 0.006404 
+stopped after 100 iterations
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 11.725171
+iter  20 value 3.384277
+iter  30 value 0.035421
+iter  40 value 0.004956
+iter  50 value 0.000254
+final  value 0.000088 
+converged
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 14.781018
+iter  20 value 1.281327
+iter  30 value 0.010132
+iter  40 value 0.000853
+final  value 0.000088 
+converged
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 11.862832
+iter  20 value 2.735249
+iter  30 value 0.083262
+iter  40 value 0.000479
+final  value 0.000048 
+converged
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 13.531822
+iter  20 value 2.978437
+iter  30 value 0.120358
+iter  40 value 0.018105
+iter  50 value 0.006490
+iter  60 value 0.003058
+iter  70 value 0.000210
+iter  80 value 0.000148
+iter  90 value 0.000122
+iter 100 value 0.000108
+final  value 0.000108 
+stopped after 100 iterations
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 19.655488
+iter  20 value 5.724385
+iter  30 value 0.410903
+iter  40 value 0.000819
+final  value 0.000085 
+converged
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 12.945413
+iter  20 value 0.716944
+iter  30 value 0.009215
+final  value 0.000028 
+converged
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 13.649612
+iter  20 value 2.140969
+iter  30 value 0.013064
+final  value 0.000000 
+converged
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 20.394779
+iter  20 value 15.060547
+iter  30 value 14.482091
+iter  40 value 14.452579
+iter  50 value 14.445197
+iter  60 value 14.433062
+iter  70 value 14.426447
+iter  80 value 14.424065
+final  value 14.424044 
+converged
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 9.304490
+iter  20 value 1.578782
+iter  30 value 0.061834
+iter  40 value 0.000158
+iter  40 value 0.000079
+iter  40 value 0.000079
+final  value 0.000079 
+converged
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 10.665407
+iter  20 value 0.477229
+iter  30 value 0.058056
+iter  40 value 0.005661
+final  value 0.000009 
+converged
+# weights:  39 (24 variable)
+initial  value 116.452903 
+iter  10 value 23.515157
+iter  20 value 2.894760
+iter  30 value 0.036932
+final  value 0.000000 
+converged
+                      Df    AIC
+- OD280_OD315          2 40.000
+- Hue                  2 40.000
+- NonflavanoidPhenols  2 40.000
+- MalicAcid            2 40.000
+- ColorIntensity       2 40.000
+- TotalPhenols         2 40.000
+- Flavanoids           2 40.000
+- Proanthocyanins      2 40.000
+- AlcalinityOfAsh      2 40.013
+<none>                   44.000
++ Magnesium            2 48.000
++ Ash                  2 48.000
++ Alcohol              2 48.000
+- Proline              2 68.848
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 13.649612
+iter  20 value 2.140969
+iter  30 value 0.013064
+final  value 0.000000 
+converged
+
+Step:  AIC=40
+Class ~ MalicAcid + AlcalinityOfAsh + TotalPhenols + Flavanoids + 
+    NonflavanoidPhenols + Proanthocyanins + ColorIntensity + 
+    Hue + Proline
+
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 14.094304
+iter  20 value 3.795297
+iter  30 value 0.460620
+final  value 0.000084 
+converged
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 12.770843
+iter  20 value 1.488575
+iter  30 value 0.036667
+final  value 0.000023 
+converged
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 12.932798
+iter  20 value 3.335185
+iter  30 value 0.013225
+final  value 0.000026 
+converged
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 18.612467
+iter  20 value 3.014850
+iter  30 value 0.162619
+iter  40 value 0.000308
+final  value 0.000096 
+converged
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 13.680603
+iter  20 value 2.420931
+iter  30 value 0.037040
+final  value 0.000021 
+converged
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 14.959488
+iter  20 value 3.492222
+iter  30 value 1.991542
+iter  40 value 0.951615
+iter  50 value 0.328527
+iter  60 value 0.168913
+iter  70 value 0.111218
+iter  80 value 0.101695
+iter  90 value 0.088150
+iter 100 value 0.075217
+final  value 0.075217 
+stopped after 100 iterations
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 17.830867
+iter  20 value 5.585103
+iter  30 value 0.318948
+iter  40 value 0.002575
+iter  50 value 0.001247
+iter  60 value 0.000939
+final  value 0.000054 
+converged
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 14.520297
+iter  20 value 1.349649
+iter  30 value 0.011776
+final  value 0.000005 
+converged
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 29.891077
+iter  20 value 18.079184
+iter  30 value 17.519492
+iter  40 value 17.502671
+iter  50 value 17.485458
+iter  60 value 17.477346
+iter  70 value 17.473898
+final  value 17.473446 
+converged
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 9.935553
+iter  20 value 2.215898
+iter  30 value 0.121399
+iter  40 value 0.001884
+final  value 0.000000 
+converged
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 13.010902
+iter  20 value 0.610480
+iter  30 value 0.024093
+iter  40 value 0.000159
+iter  40 value 0.000097
+iter  40 value 0.000048
+final  value 0.000048 
+converged
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 23.985282
+iter  20 value 3.410788
+iter  30 value 0.010128
+final  value 0.000067 
+converged
+# weights:  36 (22 variable)
+initial  value 116.452903 
+iter  10 value 11.841888
+iter  20 value 2.645622
+iter  30 value 0.050656
+iter  40 value 0.003965
+final  value 0.000000 
+converged
+                      Df    AIC
+- Hue                  2 36.000
+- NonflavanoidPhenols  2 36.000
+- AlcalinityOfAsh      2 36.000
+- TotalPhenols         2 36.000
+- ColorIntensity       2 36.000
+- MalicAcid            2 36.000
+- Flavanoids           2 36.000
+- Proanthocyanins      2 36.150
+<none>                   40.000
++ OD280_OD315          2 44.000
++ Alcohol              2 44.000
++ Ash                  2 44.000
++ Magnesium            2 44.000
+- Proline              2 70.947
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 14.520297
+iter  20 value 1.349649
+iter  30 value 0.011776
+final  value 0.000005 
+converged
+
+Step:  AIC=36
+Class ~ MalicAcid + AlcalinityOfAsh + TotalPhenols + Flavanoids + 
+    NonflavanoidPhenols + Proanthocyanins + ColorIntensity + 
+    Proline
+
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 15.438679
+iter  20 value 4.303066
+iter  30 value 1.372545
+iter  40 value 0.089431
+iter  50 value 0.004888
+iter  60 value 0.003954
+iter  70 value 0.002578
+iter  80 value 0.002230
+iter  90 value 0.001868
+final  value 0.000049 
+converged
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 13.016105
+iter  20 value 1.786334
+iter  30 value 0.046753
+iter  40 value 0.000183
+iter  50 value 0.000140
+final  value 0.000077 
+converged
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 13.937666
+iter  20 value 2.318145
+iter  30 value 0.046200
+iter  40 value 0.000247
+final  value 0.000068 
+converged
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 19.794636
+iter  20 value 3.787069
+iter  30 value 0.212241
+iter  40 value 0.003547
+iter  50 value 0.002000
+iter  60 value 0.001651
+iter  70 value 0.000803
+iter  80 value 0.000580
+iter  90 value 0.000518
+iter 100 value 0.000297
+final  value 0.000297 
+stopped after 100 iterations
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 14.563415
+iter  20 value 1.340135
+iter  30 value 0.019506
+iter  40 value 0.000372
+final  value 0.000087 
+converged
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 16.508757
+iter  20 value 2.573690
+iter  30 value 1.198432
+iter  40 value 0.266072
+iter  50 value 0.032370
+iter  60 value 0.012468
+iter  70 value 0.010612
+iter  80 value 0.007273
+iter  90 value 0.003910
+iter 100 value 0.003715
+final  value 0.003715 
+stopped after 100 iterations
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 22.532502
+iter  20 value 5.289104
+iter  30 value 0.095845
+iter  40 value 0.002490
+iter  50 value 0.000764
+iter  60 value 0.000410
+iter  70 value 0.000351
+iter  80 value 0.000241
+iter  90 value 0.000231
+iter 100 value 0.000213
+final  value 0.000213 
+stopped after 100 iterations
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 28.542937
+iter  20 value 18.611496
+iter  30 value 18.424778
+iter  40 value 18.418680
+iter  50 value 18.401072
+iter  60 value 18.393301
+final  value 18.392814 
+converged
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 10.043490
+iter  20 value 1.632626
+iter  30 value 0.033157
+iter  40 value 0.000154
+iter  40 value 0.000083
+iter  40 value 0.000041
+final  value 0.000041 
+converged
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 13.963896
+iter  20 value 0.505663
+iter  30 value 0.006796
+final  value 0.000002 
+converged
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 24.320519
+iter  20 value 3.577906
+iter  30 value 0.006698
+final  value 0.000057 
+converged
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 13.649612
+iter  20 value 2.140969
+iter  30 value 0.013064
+final  value 0.000000 
+converged
+# weights:  33 (20 variable)
+initial  value 116.452903 
+iter  10 value 12.945413
+iter  20 value 0.716944
+iter  30 value 0.009215
+final  value 0.000028 
+converged
+                      Df    AIC
+- MalicAcid            2 32.000
+- TotalPhenols         2 32.000
+- AlcalinityOfAsh      2 32.000
+- NonflavanoidPhenols  2 32.000
+- ColorIntensity       2 32.000
+- Flavanoids           2 32.001
+- Proanthocyanins      2 32.007
+<none>                   36.000
++ Hue                  2 40.000
++ Ash                  2 40.000
++ OD280_OD315          2 40.000
++ Alcohol              2 40.000
++ Magnesium            2 40.000
+- Proline              2 68.786
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 15.438679
+iter  20 value 4.303066
+iter  30 value 1.372545
+iter  40 value 0.089431
+iter  50 value 0.004888
+iter  60 value 0.003954
+iter  70 value 0.002578
+iter  80 value 0.002230
+iter  90 value 0.001868
+final  value 0.000049 
+converged
+
+Step:  AIC=32
+Class ~ AlcalinityOfAsh + TotalPhenols + Flavanoids + NonflavanoidPhenols + 
+    Proanthocyanins + ColorIntensity + Proline
+
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 7.962248
+iter  20 value 3.701582
+iter  30 value 0.595226
+iter  40 value 0.250583
+iter  50 value 0.183788
+iter  60 value 0.125158
+iter  70 value 0.105547
+iter  80 value 0.091564
+iter  90 value 0.089938
+iter 100 value 0.088462
+final  value 0.088462 
+stopped after 100 iterations
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 14.559242
+iter  20 value 4.784682
+iter  30 value 0.883075
+iter  40 value 0.268698
+iter  50 value 0.202853
+iter  60 value 0.186161
+iter  70 value 0.178521
+iter  80 value 0.168767
+iter  90 value 0.117188
+iter 100 value 0.109814
+final  value 0.109814 
+stopped after 100 iterations
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 19.674961
+iter  20 value 5.739024
+iter  30 value 1.865127
+iter  40 value 1.264628
+iter  50 value 1.133694
+iter  60 value 0.470629
+iter  70 value 0.436759
+iter  80 value 0.401278
+iter  90 value 0.361182
+iter 100 value 0.298138
+final  value 0.298138 
+stopped after 100 iterations
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 15.443983
+iter  20 value 4.391423
+iter  30 value 1.489899
+iter  40 value 0.022492
+iter  50 value 0.015838
+iter  60 value 0.009642
+iter  70 value 0.006645
+iter  80 value 0.002989
+iter  90 value 0.000493
+iter 100 value 0.000221
+final  value 0.000221 
+stopped after 100 iterations
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 14.741696
+iter  20 value 5.257220
+iter  30 value 1.335414
+iter  40 value 0.459385
+iter  50 value 0.398148
+iter  60 value 0.294787
+iter  70 value 0.280454
+iter  80 value 0.261602
+iter  90 value 0.186981
+iter 100 value 0.164496
+final  value 0.164496 
+stopped after 100 iterations
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 25.015381
+iter  20 value 8.859353
+iter  30 value 6.177242
+iter  40 value 4.397272
+iter  50 value 3.844716
+iter  60 value 3.793813
+iter  70 value 3.785652
+iter  80 value 3.777042
+iter  90 value 3.768124
+iter 100 value 3.764499
+final  value 3.764499 
+stopped after 100 iterations
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 29.174222
+iter  20 value 20.414966
+iter  30 value 20.245374
+iter  40 value 20.213695
+iter  50 value 20.201240
+iter  60 value 20.197940
+iter  70 value 20.196960
+iter  80 value 20.194463
+final  value 20.193585 
+converged
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 12.773335
+iter  20 value 6.401694
+iter  30 value 0.210640
+iter  40 value 0.062915
+iter  50 value 0.021612
+iter  60 value 0.011249
+iter  70 value 0.005139
+iter  80 value 0.002633
+iter  90 value 0.002568
+iter 100 value 0.002513
+final  value 0.002513 
+stopped after 100 iterations
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 14.520297
+iter  20 value 1.349649
+iter  30 value 0.011776
+final  value 0.000005 
+converged
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 14.083652
+iter  20 value 0.843943
+iter  30 value 0.018411
+final  value 0.000000 
+converged
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 26.433545
+iter  20 value 3.176148
+iter  30 value 0.060988
+iter  40 value 0.000155
+final  value 0.000077 
+converged
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 14.094304
+iter  20 value 3.795297
+iter  30 value 0.460620
+final  value 0.000084 
+converged
+# weights:  30 (18 variable)
+initial  value 116.452903 
+iter  10 value 15.299872
+iter  20 value 2.025091
+iter  30 value 0.006945
+final  value 0.000072 
+converged
+                      Df    AIC
+- NonflavanoidPhenols  2 28.000
+- AlcalinityOfAsh      2 28.177
+- TotalPhenols         2 28.220
+- Proanthocyanins      2 28.329
+- Flavanoids           2 28.596
+<none>                   32.000
+- ColorIntensity       2 35.529
++ Ash                  2 36.000
++ MalicAcid            2 36.000
++ OD280_OD315          2 36.000
++ Magnesium            2 36.000
++ Hue                  2 36.000
++ Alcohol              2 36.005
+- Proline              2 68.387
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 15.443983
+iter  20 value 4.391423
+iter  30 value 1.489899
+iter  40 value 0.022492
+iter  50 value 0.015838
+iter  60 value 0.009642
+iter  70 value 0.006645
+iter  80 value 0.002989
+iter  90 value 0.000493
+iter 100 value 0.000221
+final  value 0.000221 
+stopped after 100 iterations
+
+Step:  AIC=28
+Class ~ AlcalinityOfAsh + TotalPhenols + Flavanoids + Proanthocyanins + 
+    ColorIntensity + Proline
+
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 6.968882
+iter  20 value 3.001318
+iter  30 value 1.364366
+iter  40 value 0.982301
+iter  50 value 0.908384
+iter  60 value 0.835183
+iter  70 value 0.721029
+iter  80 value 0.451591
+iter  90 value 0.291709
+iter 100 value 0.242733
+final  value 0.242733 
+stopped after 100 iterations
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 14.624163
+iter  20 value 4.637652
+iter  30 value 1.276510
+iter  40 value 0.757256
+iter  50 value 0.679512
+iter  60 value 0.631306
+iter  70 value 0.620615
+iter  80 value 0.569245
+iter  90 value 0.552928
+iter 100 value 0.510199
+final  value 0.510199 
+stopped after 100 iterations
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 20.095181
+iter  20 value 5.958115
+iter  30 value 1.917068
+iter  40 value 1.707305
+iter  50 value 1.542138
+iter  60 value 1.473460
+iter  70 value 1.402776
+iter  80 value 1.189673
+iter  90 value 1.046825
+iter 100 value 0.737717
+final  value 0.737717 
+stopped after 100 iterations
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 14.793301
+iter  20 value 5.374762
+iter  30 value 1.964385
+iter  40 value 0.674907
+iter  50 value 0.657147
+iter  60 value 0.651569
+iter  70 value 0.614880
+iter  80 value 0.412226
+iter  90 value 0.360835
+iter 100 value 0.328064
+final  value 0.328064 
+stopped after 100 iterations
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 25.660566
+iter  20 value 11.846704
+iter  30 value 9.078423
+iter  40 value 7.022799
+iter  50 value 6.746233
+iter  60 value 6.655022
+iter  70 value 6.381542
+iter  80 value 6.117773
+iter  90 value 5.797792
+iter 100 value 5.682836
+final  value 5.682836 
+stopped after 100 iterations
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 29.104951
+iter  20 value 20.493463
+iter  30 value 20.315675
+iter  40 value 20.273941
+iter  50 value 20.262753
+iter  60 value 20.259410
+iter  70 value 20.258912
+final  value 20.258565 
+converged
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 12.769357
+iter  20 value 6.417732
+iter  30 value 0.197259
+iter  40 value 0.051497
+iter  50 value 0.027149
+iter  60 value 0.012592
+iter  70 value 0.007120
+iter  80 value 0.006999
+iter  90 value 0.006910
+iter 100 value 0.006834
+final  value 0.006834 
+stopped after 100 iterations
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 14.563415
+iter  20 value 1.340135
+iter  30 value 0.019506
+iter  40 value 0.000372
+final  value 0.000087 
+converged
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 14.251776
+iter  20 value 1.001421
+iter  30 value 0.024600
+final  value 0.000046 
+converged
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 26.452183
+iter  20 value 3.249560
+iter  30 value 0.089158
+iter  40 value 0.000578
+iter  50 value 0.000134
+final  value 0.000095 
+converged
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 15.438679
+iter  20 value 4.303066
+iter  30 value 1.372545
+iter  40 value 0.089431
+iter  50 value 0.004888
+iter  60 value 0.003954
+iter  70 value 0.002578
+iter  80 value 0.002230
+iter  90 value 0.001868
+final  value 0.000049 
+converged
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 14.215833
+iter  20 value 3.883414
+iter  30 value 0.287800
+iter  40 value 0.001923
+iter  50 value 0.000424
+iter  60 value 0.000391
+iter  70 value 0.000215
+iter  80 value 0.000212
+iter  90 value 0.000180
+final  value 0.000070 
+converged
+# weights:  27 (16 variable)
+initial  value 116.452903 
+iter  10 value 15.322019
+iter  20 value 2.007435
+iter  30 value 0.007372
+iter  40 value 0.000158
+final  value 0.000067 
+converged
+                      Df    AIC
+- AlcalinityOfAsh      2 24.485
+- Proanthocyanins      2 24.656
+- TotalPhenols         2 25.020
+- Flavanoids           2 25.475
+<none>                   28.000
++ Ash                  2 32.000
++ NonflavanoidPhenols  2 32.000
++ OD280_OD315          2 32.000
++ Hue                  2 32.000
++ MalicAcid            2 32.000
++ Magnesium            2 32.000
++ Alcohol              2 32.014
+- ColorIntensity       2 35.366
+- Proline              2 64.517
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 6.968882
+iter  20 value 3.001318
+iter  30 value 1.364366
+iter  40 value 0.982301
+iter  50 value 0.908384
+iter  60 value 0.835183
+iter  70 value 0.721029
+iter  80 value 0.451591
+iter  90 value 0.291709
+iter 100 value 0.242733
+final  value 0.242733 
+stopped after 100 iterations
+
+Step:  AIC=24.49
+Class ~ TotalPhenols + Flavanoids + Proanthocyanins + ColorIntensity + 
+    Proline
+
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 11.765798
+iter  20 value 1.068145
+iter  30 value 0.228490
+iter  40 value 0.153703
+iter  50 value 0.114715
+iter  60 value 0.112063
+iter  70 value 0.111001
+iter  80 value 0.108727
+iter  90 value 0.089744
+iter 100 value 0.085525
+final  value 0.085525 
+stopped after 100 iterations
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 13.496854
+iter  20 value 4.598530
+iter  30 value 2.475409
+iter  40 value 2.230719
+iter  50 value 2.200694
+iter  60 value 2.149535
+iter  70 value 2.060522
+iter  80 value 2.030478
+iter  90 value 2.024641
+iter 100 value 2.012299
+final  value 2.012299 
+stopped after 100 iterations
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 13.980200
+iter  20 value 4.055912
+iter  30 value 2.109992
+iter  40 value 1.932131
+iter  50 value 1.883500
+iter  60 value 1.807045
+iter  70 value 1.613693
+iter  80 value 1.553896
+iter  90 value 1.184595
+iter 100 value 1.142869
+final  value 1.142869 
+stopped after 100 iterations
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 24.779237
+iter  20 value 15.529104
+iter  30 value 14.240478
+iter  40 value 14.138390
+iter  50 value 14.091834
+iter  60 value 14.040828
+iter  70 value 13.946549
+iter  80 value 13.941741
+iter  90 value 13.938293
+iter 100 value 13.935367
+final  value 13.935367 
+stopped after 100 iterations
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 27.129237
+iter  20 value 22.685360
+iter  30 value 22.208048
+iter  40 value 22.182702
+final  value 22.182494 
+converged
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 14.665018
+iter  20 value 3.817583
+iter  30 value 0.251766
+iter  40 value 0.101942
+iter  50 value 0.061175
+iter  60 value 0.055516
+iter  70 value 0.052355
+iter  80 value 0.047582
+iter  90 value 0.043307
+iter 100 value 0.042551
+final  value 0.042551 
+stopped after 100 iterations
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 14.816889
+iter  20 value 0.885973
+iter  30 value 0.019963
+iter  40 value 0.001750
+iter  50 value 0.001118
+iter  60 value 0.000339
+iter  70 value 0.000313
+iter  80 value 0.000248
+iter  90 value 0.000162
+iter 100 value 0.000140
+final  value 0.000140 
+stopped after 100 iterations
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 11.417554
+iter  20 value 1.384825
+iter  30 value 0.087681
+iter  40 value 0.028617
+iter  50 value 0.026672
+iter  60 value 0.021290
+iter  70 value 0.019986
+iter  80 value 0.018582
+iter  90 value 0.016453
+iter 100 value 0.015711
+final  value 0.015711 
+stopped after 100 iterations
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 15.443983
+iter  20 value 4.391423
+iter  30 value 1.489899
+iter  40 value 0.022492
+iter  50 value 0.015838
+iter  60 value 0.009642
+iter  70 value 0.006645
+iter  80 value 0.002989
+iter  90 value 0.000493
+iter 100 value 0.000221
+final  value 0.000221 
+stopped after 100 iterations
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 18.984608
+iter  20 value 4.478049
+iter  30 value 0.565056
+iter  40 value 0.186048
+iter  50 value 0.111544
+iter  60 value 0.082296
+iter  70 value 0.065298
+iter  80 value 0.052832
+iter  90 value 0.047071
+iter 100 value 0.045871
+final  value 0.045871 
+stopped after 100 iterations
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 7.962248
+iter  20 value 3.701582
+iter  30 value 0.595226
+iter  40 value 0.250583
+iter  50 value 0.183788
+iter  60 value 0.125158
+iter  70 value 0.105547
+iter  80 value 0.091564
+iter  90 value 0.089938
+iter 100 value 0.088467
+final  value 0.088467 
+stopped after 100 iterations
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 7.213777
+iter  20 value 3.601380
+iter  30 value 0.325843
+iter  40 value 0.205074
+iter  50 value 0.164108
+iter  60 value 0.159250
+iter  70 value 0.154451
+iter  80 value 0.140870
+iter  90 value 0.134838
+iter 100 value 0.128930
+final  value 0.128930 
+stopped after 100 iterations
+# weights:  24 (14 variable)
+initial  value 116.452903 
+iter  10 value 8.878154
+iter  20 value 1.089884
+iter  30 value 0.384270
+iter  40 value 0.133715
+iter  50 value 0.080972
+iter  60 value 0.068225
+iter  70 value 0.056886
+iter  80 value 0.047531
+iter  90 value 0.042252
+iter 100 value 0.038635
+final  value 0.038635 
+stopped after 100 iterations
+                      Df    AIC
+- TotalPhenols         2 20.171
+- Proanthocyanins      2 22.286
+- Flavanoids           2 24.025
+<none>                   24.485
++ MalicAcid            2 28.000
++ AlcalinityOfAsh      2 28.000
++ Ash                  2 28.031
++ OD280_OD315          2 28.077
++ Alcohol              2 28.085
++ Magnesium            2 28.092
++ NonflavanoidPhenols  2 28.177
++ Hue                  2 28.258
+- ColorIntensity       2 47.871
+- Proline              2 64.365
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 11.765798
+iter  20 value 1.068145
+iter  30 value 0.228490
+iter  40 value 0.153703
+iter  50 value 0.114715
+iter  60 value 0.112063
+iter  70 value 0.111001
+iter  80 value 0.108727
+iter  90 value 0.089744
+iter 100 value 0.085525
+final  value 0.085525 
+stopped after 100 iterations
+
+Step:  AIC=20.17
+Class ~ Flavanoids + Proanthocyanins + ColorIntensity + Proline
+
+# weights:  15 (8 variable)
+initial  value 116.452903 
+iter  10 value 18.036643
+iter  20 value 12.417872
+iter  30 value 10.670136
+iter  40 value 10.230152
+iter  50 value 9.946458
+iter  60 value 9.741582
+iter  70 value 9.668186
+iter  80 value 9.626702
+iter  90 value 9.586760
+iter 100 value 9.577854
+final  value 9.577854 
+stopped after 100 iterations
+# weights:  15 (8 variable)
+initial  value 116.452903 
+iter  10 value 11.126189
+iter  20 value 3.078173
+iter  30 value 2.507158
+iter  40 value 2.459903
+iter  50 value 2.355225
+iter  60 value 1.976331
+iter  70 value 1.537637
+iter  80 value 1.474456
+iter  90 value 1.459486
+iter 100 value 1.368925
+final  value 1.368925 
+stopped after 100 iterations
+# weights:  15 (8 variable)
+initial  value 116.452903 
+iter  10 value 24.071564
+iter  20 value 15.112637
+iter  30 value 14.213344
+iter  40 value 14.158897
+iter  50 value 14.079847
+iter  60 value 14.078289
+iter  70 value 14.078056
+final  value 14.078055 
+converged
+# weights:  15 (8 variable)
+initial  value 116.452903 
+iter  10 value 27.013373
+iter  20 value 24.254947
+iter  30 value 23.942763
+iter  40 value 23.922200
+final  value 23.922197 
+converged
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 13.830983
+iter  20 value 3.108989
+iter  30 value 0.572070
+iter  40 value 0.243504
+iter  50 value 0.236249
+iter  60 value 0.227827
+iter  70 value 0.188493
+iter  80 value 0.148927
+iter  90 value 0.121647
+iter 100 value 0.119009
+final  value 0.119009 
+stopped after 100 iterations
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 11.916719
+iter  20 value 0.578145
+iter  30 value 0.010509
+iter  40 value 0.003185
+iter  50 value 0.002370
+iter  60 value 0.001870
+iter  70 value 0.001353
+iter  80 value 0.001237
+iter  90 value 0.001002
+iter 100 value 0.000804
+final  value 0.000804 
+stopped after 100 iterations
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 10.273720
+iter  20 value 1.610269
+iter  30 value 0.387847
+iter  40 value 0.258590
+iter  50 value 0.226228
+iter  60 value 0.216612
+iter  70 value 0.202351
+iter  80 value 0.165251
+iter  90 value 0.139295
+iter 100 value 0.136217
+final  value 0.136217 
+stopped after 100 iterations
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 14.624163
+iter  20 value 4.637652
+iter  30 value 1.276510
+iter  40 value 0.757256
+iter  50 value 0.679512
+iter  60 value 0.631307
+iter  70 value 0.620616
+iter  80 value 0.569319
+iter  90 value 0.552994
+iter 100 value 0.510428
+final  value 0.510428 
+stopped after 100 iterations
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 18.476563
+iter  20 value 3.911148
+iter  30 value 0.687115
+iter  40 value 0.548127
+iter  50 value 0.518217
+iter  60 value 0.508023
+iter  70 value 0.471710
+iter  80 value 0.417277
+iter  90 value 0.367293
+iter 100 value 0.349785
+final  value 0.349785 
+stopped after 100 iterations
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 6.968882
+iter  20 value 3.001318
+iter  30 value 1.364366
+iter  40 value 0.982301
+iter  50 value 0.908384
+iter  60 value 0.835183
+iter  70 value 0.721029
+iter  80 value 0.451591
+iter  90 value 0.291707
+iter 100 value 0.242731
+final  value 0.242731 
+stopped after 100 iterations
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 12.085931
+iter  20 value 1.752222
+iter  30 value 0.021337
+iter  40 value 0.018127
+iter  50 value 0.003803
+iter  60 value 0.003773
+iter  70 value 0.002291
+iter  80 value 0.002113
+iter  90 value 0.001715
+iter 100 value 0.001546
+final  value 0.001546 
+stopped after 100 iterations
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 7.146415
+iter  20 value 2.508010
+iter  30 value 0.752217
+iter  40 value 0.131630
+iter  50 value 0.122589
+iter  60 value 0.119423
+iter  70 value 0.112381
+iter  80 value 0.107066
+iter  90 value 0.104795
+iter 100 value 0.102405
+final  value 0.102405 
+stopped after 100 iterations
+# weights:  21 (12 variable)
+initial  value 116.452903 
+iter  10 value 7.079819
+iter  20 value 2.704501
+iter  30 value 1.354444
+iter  40 value 0.818014
+iter  50 value 0.718840
+iter  60 value 0.686777
+iter  70 value 0.536828
+iter  80 value 0.263538
+iter  90 value 0.197964
+iter 100 value 0.186845
+final  value 0.186845 
+stopped after 100 iterations
+                      Df    AIC
+- Proanthocyanins      2 18.738
+<none>                   20.171
++ MalicAcid            2 24.002
++ NonflavanoidPhenols  2 24.003
++ Hue                  2 24.205
++ Alcohol              2 24.238
++ Ash                  2 24.272
++ OD280_OD315          2 24.374
++ TotalPhenols         2 24.485
++ Magnesium            2 24.700
++ AlcalinityOfAsh      2 25.021
+- Flavanoids           2 35.156
+- ColorIntensity       2 44.156
+- Proline              2 63.844
+# weights:  15 (8 variable)
+initial  value 116.452903 
+iter  10 value 11.126189
+iter  20 value 3.078173
+iter  30 value 2.507158
+iter  40 value 2.459903
+iter  50 value 2.355225
+iter  60 value 1.976331
+iter  70 value 1.537637
+iter  80 value 1.474456
+iter  90 value 1.459486
+iter 100 value 1.368925
+final  value 1.368925 
+stopped after 100 iterations
+
+Step:  AIC=18.74
+Class ~ Flavanoids + ColorIntensity + Proline
+
+# weights:  12 (6 variable)
+initial  value 116.452903 
+iter  10 value 25.603031
+iter  20 value 22.308247
+iter  30 value 22.185162
+iter  40 value 22.169146
+final  value 22.169011 
+converged
+# weights:  12 (6 variable)
+initial  value 116.452903 
+iter  10 value 22.793445
+iter  20 value 18.415287
+iter  30 value 18.248549
+iter  40 value 18.227871
+iter  40 value 18.227871
+final  value 18.227871 
+converged
+# weights:  12 (6 variable)
+initial  value 116.452903 
+iter  10 value 26.438539
+iter  20 value 24.288466
+iter  30 value 24.031167
+iter  40 value 24.029776
+iter  50 value 24.028962
+iter  60 value 24.027780
+iter  70 value 24.027622
+iter  80 value 24.027570
+iter  90 value 24.027515
+iter 100 value 24.027457
+final  value 24.027457 
+stopped after 100 iterations
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 15.269977
+iter  20 value 4.787283
+iter  30 value 1.717028
+iter  40 value 0.729680
+iter  50 value 0.220769
+iter  60 value 0.184937
+iter  70 value 0.178096
+iter  80 value 0.172992
+iter  90 value 0.160916
+iter 100 value 0.156301
+final  value 0.156301 
+stopped after 100 iterations
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 18.132174
+iter  20 value 1.282569
+iter  30 value 0.419084
+iter  40 value 0.277593
+iter  50 value 0.223360
+iter  60 value 0.189912
+iter  70 value 0.173066
+iter  80 value 0.164766
+iter  90 value 0.160101
+iter 100 value 0.155730
+final  value 0.155730 
+stopped after 100 iterations
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 11.017488
+iter  20 value 1.359799
+iter  30 value 0.980802
+iter  40 value 0.834500
+iter  50 value 0.682328
+iter  60 value 0.609089
+iter  70 value 0.559227
+iter  80 value 0.092164
+iter  90 value 0.013106
+iter 100 value 0.008873
+final  value 0.008873 
+stopped after 100 iterations
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 15.735152
+iter  20 value 4.869513
+iter  30 value 2.034713
+iter  40 value 1.967493
+iter  50 value 1.195374
+iter  60 value 1.124356
+iter  70 value 1.037424
+iter  80 value 1.010650
+iter  90 value 0.994183
+iter 100 value 0.913813
+final  value 0.913813 
+stopped after 100 iterations
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 20.951600
+iter  20 value 5.312821
+iter  30 value 3.733533
+iter  40 value 2.301578
+iter  50 value 0.445428
+iter  60 value 0.431478
+iter  70 value 0.069199
+iter  80 value 0.067784
+iter  90 value 0.067134
+iter 100 value 0.066218
+final  value 0.066218 
+stopped after 100 iterations
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 13.980200
+iter  20 value 4.055912
+iter  30 value 2.109992
+iter  40 value 1.932131
+iter  50 value 1.883500
+iter  60 value 1.807045
+iter  70 value 1.613693
+iter  80 value 1.553896
+iter  90 value 1.184588
+iter 100 value 1.142861
+final  value 1.142861 
+stopped after 100 iterations
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 11.920565
+iter  20 value 1.173440
+iter  30 value 0.297196
+iter  40 value 0.279429
+iter  50 value 0.268520
+iter  60 value 0.246664
+iter  70 value 0.242941
+iter  80 value 0.224243
+iter  90 value 0.221846
+iter 100 value 0.212140
+final  value 0.212140 
+stopped after 100 iterations
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 11.765798
+iter  20 value 1.068145
+iter  30 value 0.228490
+iter  40 value 0.153703
+iter  50 value 0.114715
+iter  60 value 0.112063
+iter  70 value 0.111001
+iter  80 value 0.108727
+iter  90 value 0.089744
+iter 100 value 0.085525
+final  value 0.085525 
+stopped after 100 iterations
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 12.371052
+iter  20 value 2.449145
+iter  30 value 1.043659
+iter  40 value 0.531825
+iter  50 value 0.529434
+iter  60 value 0.454128
+iter  70 value 0.410524
+iter  80 value 0.222162
+iter  90 value 0.217785
+iter 100 value 0.210244
+final  value 0.210244 
+stopped after 100 iterations
+# weights:  18 (10 variable)
+initial  value 116.452903 
+iter  10 value 8.755005
+iter  20 value 3.075957
+iter  30 value 1.398442
+iter  40 value 0.901382
+iter  50 value 0.750508
+iter  60 value 0.626406
+iter  70 value 0.183107
+iter  80 value 0.120571
+iter  90 value 0.120075
+iter 100 value 0.114692
+final  value 0.114692 
+stopped after 100 iterations
+                      Df    AIC
+<none>                   18.738
++ Ash                  2 20.018
++ Magnesium            2 20.132
++ Proanthocyanins      2 20.171
++ OD280_OD315          2 20.229
++ MalicAcid            2 20.311
++ Alcohol              2 20.313
++ Hue                  2 20.420
++ NonflavanoidPhenols  2 20.424
++ AlcalinityOfAsh      2 21.828
++ TotalPhenols         2 22.286
+- ColorIntensity       2 48.456
+- Flavanoids           2 56.338
+- Proline              2 60.055
